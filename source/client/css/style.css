@@ -1,0 +1,194 @@
+/*body {
+  padding-top: 20px;
+  padding-bottom: 60px;
+}*/
+
+/* Custom container */
+/*.container {
+  max-width: 1170px;
+}
+.container > hr {
+  margin: 40px 0;
+}*/
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  margin: 80px 0;
+  text-align: center;
+}
+.jumbotron h1 {
+  font-size: 100px;
+  line-height: 1;
+}
+.jumbotron .lead {
+  font-size: 24px;
+  line-height: 1.25;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 60px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+
+/* Customize the navbar links to be fill the entire space of the .navbar */
+
+.navbar .navbar-inner {
+  padding: 0;
+}
+.navbar .nav {
+  margin: 0;
+  display: table;
+  width: 100%;
+}
+.navbar .nav li {
+  display: table-cell;
+  width: 1%;
+  float: none;
+}
+.navbar .nav li a {
+  font-weight: bold;
+  text-align: center;
+  border-left: 1px solid rgba(255,255,255,.75);
+  border-right: 1px solid rgba(0,0,0,.1);
+    cursor: pointer;
+}
+.navbar .nav li:first-child a {
+  border-left: 0;
+  border-radius: 3px 0 0 3px;
+}
+.navbar .nav li:last-child a {
+  border-right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.measurementnotetext
+{
+    width: 500px;
+    height: 50px;
+}
+
+.measurementtext
+{
+    width: 50px;
+    height: auto;
+}
+
+.form-small .control-label {
+    width: 90px;
+}
+
+.form-small .controls {
+    margin-left: 95px;
+}
+
+.form-medium .control-label {
+    width: 180px;
+}
+
+.form-medium .controls {
+    margin-left: 200px;
+}
+
+.form-xlarge .control-label {
+    width: 240px;
+}
+
+.form-xlarge .controls {
+    margin-left: 260px;
+}
+
+.pagebreak { 
+    page-break-before: always; 
+}
+
+body .modal {
+  width: 96%; /* desired relative width */
+  left: 2%; /* (100%-width)/2 */
+  /* place center */
+  margin-left:auto;
+  margin-right:auto; 
+}
+
+.table-main {
+    height: 410px;
+    overflow: auto;
+}
+
+.table-weeks {
+    height: 205px;
+    overflow: auto;
+}
+
+.table-days {
+    height: 320px;
+    overflow: auto;
+}
+
+
+/* tables */
+table.tablesorter {
+    font-family:arial;
+    background-color: #CDCDCD;
+    margin:10px 0pt 15px;
+    font-size: 10pt;
+    width: 100%;
+    text-align: left;
+}
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    background-color: #e6EEEE;
+    border: 1px solid #FFF;
+    font-size: 10pt;
+    padding: 4px;
+    cursor: pointer;
+}
+table.tablesorter thead tr .header {
+    background-image: url(bg.gif);
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+table.tablesorter tbody td {
+    color: #3D3D3D;
+    padding: 4px;
+    background-color: #FFF;
+    vertical-align: top;
+    border: 1px solid #eeeeee;
+}
+
+table.tablesorter tbody tr.odd td {
+    background-color:#F0F0F6;
+}
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(asc.gif);
+}
+
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(desc.gif);
+}
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
+    background-color: #8dbdd8;
+}
+
+.error {
+    display: block;
+    color: #FF0000;
+ }
+
+.fieldWithErrors{
+    color: #FF0000;
+}
+
+legend {
+    font-size: 17px;
+}
+
+div.borderedDiv {
+    outline: 1px solid darkgray;
+}
