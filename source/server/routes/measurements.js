@@ -1,5 +1,6 @@
-﻿var logger = require('../log/log').logger;
-var db = require('../db/db').db;
+﻿require('rootpath')();
+var logger = require('log').logger;
+var db = require('db').db;
 var BSON = require('mongodb').BSONPure;
 
 

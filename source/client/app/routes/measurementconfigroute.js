@@ -38,7 +38,7 @@ App.MeasurementconfigsNewRoute = Ember.Route.extend({
     },
 
     setupController: function (controller, m) {
-        this.controllerFor('measurementconfigs.edit').setProperties({ isNew: true, model: m });
+        this.controllerFor('measurementconfigs.new').setProperties({ isNew: true, model: m });
     },
 
     renderTemplate: function () {

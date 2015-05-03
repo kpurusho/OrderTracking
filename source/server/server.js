@@ -7,15 +7,18 @@ var measurementitems = require('./routes/measurementitems');
 var measurementconfigs = require('./routes/measurementconfigs');
 var measurementitemconfigs = require('./routes/measurementitemconfigs');
 var orders = require('./routes/orders');
-var logger = require('./log/log').logger;
+var logger = require('log').logger;
 
 var app = express();
+
  // ## CORS middleware
 // see: http://stackoverflow.com/questions/7067966/how-to-allow-cors-in-express-nodejs
 var allowCrossDomain = function(req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
+    res.header('Access-Control-Allow-Credentials', true);
     res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
     res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    logger.info('allowCrossDomain');
 
     // intercept OPTIONS method
     if ('OPTIONS' == req.method) {
@@ -36,7 +39,7 @@ app.configure(function () {
 //uncomment following sectionto include express logging into logger
 var logstream = {
 	write : function(message, encoding) {
-			logger.info(message);
+			logger.info('express logging: ' + message);
 		}
 };
 app.use(express.logger({stream : logstream}));
@@ -97,9 +100,9 @@ app.delete('/orders/:id', orders.delete);
 //Order summary
 app.get('/ordersummaries', orders.getSummary);
 
-app.listen(3000);
+var port = process.env.PORT || 3000;
+app.listen(port);
 
-logger.info('server listening on port 3000...')
 
 
 

@@ -1,5 +1,5 @@
 require('rootpath')();
-var logger = require('log/log').logger;
+var logger = require('log').logger;
 var MongoClient = require('mongodb').MongoClient;
 var MongoServer = require('mongodb').Server;
 

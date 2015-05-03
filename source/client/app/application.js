@@ -53,7 +53,13 @@ App = Ember.Application.create({
 
 //REST adapter
 App.ApplicationAdapter = DS.RESTAdapter.extend({
-    host: 'http://localhost:3000'
+    host: 'https://order-tracking-backend.herokuapp.com',
+	ajax: function(url, method, hash) {
+		hash = hash || {}; // hash may be undefined
+		hash.crossDomain = true;
+		//hash.xhrFields = {withCredentials: true};
+		return this._super(url, method, hash);
+	}
 });
 
 Ember.EasyForm.Config.registerInputType('mydate', App.DatePicker);

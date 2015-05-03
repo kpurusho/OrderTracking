@@ -53,7 +53,13 @@ App = Ember.Application.create({
 
 //REST adapter
 App.ApplicationAdapter = DS.RESTAdapter.extend({
-    host: 'http://localhost:3000'
+    host: 'https://order-tracking-backend.herokuapp.com',
+	ajax: function(url, method, hash) {
+		hash = hash || {}; // hash may be undefined
+		hash.crossDomain = true;
+		//hash.xhrFields = {withCredentials: true};
+		return this._super(url, method, hash);
+	}
 });
 
 Ember.EasyForm.Config.registerInputType('mydate', App.DatePicker);
@@ -366,6 +372,7 @@ App.MeasurementconfigsIndexController = Ember.ArrayController.extend({
 });
 
 
+App.MeasurementconfigsNewController = App.MeasurementconfigsEditController.extend();
 /**
  * Created by Karthik on 4/25/2014.
  */
@@ -1721,7 +1728,7 @@ App.MeasurementconfigsNewRoute = Ember.Route.extend({
     },
 
     setupController: function (controller, m) {
-        this.controllerFor('measurementconfigs.edit').setProperties({ isNew: true, model: m });
+        this.controllerFor('measurementconfigs.new').setProperties({ isNew: true, model: m });
     },
 
     renderTemplate: function () {

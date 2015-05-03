@@ -4,6 +4,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"dependencies": {
+		"rootpath": "0.1.2",
 		"express": "3.5.1",
 		"mongodb": "1.4.0",
 		"winston": "0.7.3",

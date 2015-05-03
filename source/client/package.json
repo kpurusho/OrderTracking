@@ -1,9 +1,11 @@
 {
-  "name": "comfort-designs-client",
-  "description": "comfort design client",
+  "name": "Order-Tracking-System",
+  "description": "Order-Tracking-System",
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "grunt-cli": "0.1.13",
+    "express": "3.5.1",
     "async": "*"
   },
   "devDependencies": {

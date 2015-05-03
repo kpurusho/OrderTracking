@@ -1,0 +1,1 @@
+App.MeasurementconfigsNewController = App.MeasurementconfigsEditController.extend();
